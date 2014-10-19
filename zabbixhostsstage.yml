@@ -1,0 +1,11 @@
+---
+### Playbook for Zabbix Installs
+
+- hosts: zabbix-stage
+  sudo: True
+  user: $user
+  vars_files:
+  - vars/zabbix_main.yml
+  tasks:
+  - include: tasks/zabbix_install_v2_2_2.yml
+
